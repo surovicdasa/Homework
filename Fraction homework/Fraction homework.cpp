@@ -20,31 +20,31 @@ public:
         cin >> denominator;
     }
 
-    Fraction add(const Fraction& other) const {
+    Fraction add(const Fraction& other)  {
         int newNumerator = numerator * other.denominator + other.numerator * denominator;
         int newDenominator = denominator * other.denominator;
         return Fraction(newNumerator, newDenominator);
     }
 
-    Fraction subtract(const Fraction& other) const {
+    Fraction subtract(const Fraction& other)  {
         int newNumerator = numerator * other.denominator - other.numerator * denominator;
         int newDenominator = denominator * other.denominator;
         return Fraction(newNumerator, newDenominator);
     }
 
-    Fraction multiply(const Fraction& other) const {
+    Fraction multiply(const Fraction& other)  {
         int newNumerator = numerator * other.numerator;
         int newDenominator = denominator * other.denominator;
         return Fraction(newNumerator, newDenominator);
     }
 
-    Fraction divide(const Fraction& other) const {
+    Fraction divide(const Fraction& other)  {
         int newNumerator = numerator * other.denominator;
         int newDenominator = denominator * other.numerator;
         return Fraction(newNumerator, newDenominator);
     }
 
-    void print() const {
+    void print()  {
        cout << numerator << "/" << denominator;
     }
 };
